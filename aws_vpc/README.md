@@ -95,7 +95,14 @@ If there are two VPCs that use overlapping CIDR blocks and both need to connect 
 2. Re-address one of the VPCs to use a non-overlapping CIDR block. This avoids any complex NAT configuration.
 3. Consider using AWS PrivateLink instead of a Transit Gateway for connectivity between the VPCs. PrivateLink allows private connectivity between VPCs and supported AWS services without needing public IP addresses or a VPN connection.
 
+# VPC Peering
+1. Similar to Transit Gateway it allows connecting only 2 VPCs with each other
+2. The CIDR Blocks cannot be overlapping of both VPCs.
+3. Does not support Inter-region connection of VPCs
+4. Best suited for connecting a limited number of VPCs within the same AWS region for east-west traffic between workloads.
+5. Provides connection at no additional cost. But it becomes hard to manage with lots of VPC Peering connections.
 
 ### Notes:
 1. https://github.com/aws-samples/aws-transit-gateway-egress-vpc-pattern
 2. https://aws.amazon.com/blogs/networking-and-content-delivery/building-an-egress-vpc-with-aws-transit-gateway-and-the-aws-cdk/
+
