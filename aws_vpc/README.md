@@ -106,3 +106,4 @@ If there are two VPCs that use overlapping CIDR blocks and both need to connect 
 1. https://github.com/aws-samples/aws-transit-gateway-egress-vpc-pattern
 2. https://aws.amazon.com/blogs/networking-and-content-delivery/building-an-egress-vpc-with-aws-transit-gateway-and-the-aws-cdk/
 
+
