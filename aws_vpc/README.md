@@ -1,63 +1,3 @@
-
-# Welcome to your CDK Python project!
-
-This is a blank project for CDK development with Python.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
-
-To manually create a virtualenv on MacOS and Linux:
-
-```
-$ python -m venv .venv
-```
-
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
-
-```
-$ source .venv/bin/activate
-```
-
-If you are a Windows platform, you would activate the virtualenv like this:
-
-```
-% .venv\Scripts\activate.bat
-```
-
-Once the virtualenv is activated, you can install the required dependencies.
-
-```
-$ pip install -r requirements.txt
-```
-
-At this point you can now synthesize the CloudFormation template for this code.
-
-```
-$ cdk synth
-```
-
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
-
-## Useful commands
-
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
-
-Enjoy!
-
-
 # VPC
 1. Logically Isolated network which isolates from all other networks. Default VPC is **172.31.0.0/16**
 2. IPv4 CIDR Blocks can be of RFC 1918 between /16 and /28 Prefix. CIDR Block can be added/removed after creation
@@ -114,7 +54,7 @@ Here are the steps for the inbound request flow when a request comes in for an E
 6. If allowed, the EC2 instance is able to receive the request at its private IP address. The instance then processes the request, such as serving the website content for the URL requested. 
 7. The internet gateway translates the private IP back to the public IP for the response traffic before routing back to the internet.
 Sources
-[1] [EC2 instance in private subnet shows IPv4 address of NAT instance] (https://repost.aws/questions/QUJHaYMIefQI6IfpquqwEikQ/ec2-instance-in-private-subnet-shows-ipv4-address-of-nat-instance)
+[1] [EC2 instance in private subnet shows IPv4 address of NAT instance](https://repost.aws/questions/QUJHaYMIefQI6IfpquqwEikQ/ec2-instance-in-private-subnet-shows-ipv4-address-of-nat-instance)
 
 
 # Egress Only Gateway
